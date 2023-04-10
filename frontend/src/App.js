@@ -14,6 +14,7 @@ import AdminAuth from "./auth/AdminAuth";
 import UserProvider from "./context/UserProvider";
 import AdminProvider from "./context/AdminProvider";
 import { useState } from "react";
+import MerchMaker from "./components/user/MerchMaker";
 
 function App() {
   const [currentUser, setCurrentUser] = useState(
@@ -56,6 +57,7 @@ function App() {
               path="user"
             >
               <Route path="profile" element={<UserProfile />} />
+              <Route path="merchmaker" element={<MerchMaker />} />
             </Route>
             <Route path="*" element={<NotFound />} />
           </Routes>
